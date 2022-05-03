@@ -68,10 +68,14 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "ZAGLIM_LAYER_TAP";
 			#binding-cells = <2>;
-			tapping-term-ms = <50>;
+			tapping-term-ms = <25>;
 			quick_tap_ms = <0>;
 			flavor = "hold-preferred";
 			bindings = <&mo>, <&kp>;
+		};
+		
+		&mt {
+  			  retro-tap;			// Holding the mod key without touching anything else will send tap code upon release.
 		};
 		
 	};
@@ -84,7 +88,7 @@
 			bindings = <
 	&kp TAB		&kp Q		&kp W		&kp F		&kp P		&kp B					&kp J		&kp L		&kp U		&kp Y		&kp SEMI	&sl FUNC
 	&kp BSPC	&kp A		&kp R		&kp S		&kp T		&kp G					&kp M		&kp N		&kp E		&kp I		&kp O		&none
-	&none		&kp Z		&kp X		&kp C		&kp D		&kp V					&kp K		&kp H		&kp COMMA	&kp DOT		&kp FSLH	&none
+	&LSHIFT		&hp LALT Z	&kp X		&kp C		&kp D		&kp V					&kp K		&kp H		&kp COMMA	&kp DOT		&kp FSLH	&none
 								&kp LCTRL	&zlt MATH SPC	&mt LGUI SPC		&hp RSHIFT RET &zlt NAVI RET	&kp RALT
 			>;
 		};
