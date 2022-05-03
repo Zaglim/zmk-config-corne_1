@@ -74,9 +74,6 @@
 			bindings = <&mo>, <&kp>;
 		};
 		
-		&mt {
-  			  retro-tap;			// Holding the mod key without touching anything else will send tap code upon release.
-		};
 		
 	};
  
